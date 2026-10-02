@@ -24,12 +24,15 @@ jobs:
           sudo apt install -y openjdk-17-jdk zip unzip git ccache \
             libffi-dev libssl-dev build-essential \
             python3-dev python3-pip autoconf libtool pkg-config zlib1g-dev \
-            libncurses5-dev libncursesw5-dev libtinfo5 cmake gettext
+            libncurses5-dev libncursesw5-dev libtinfo5 cmake gettext \
+            libltdl-dev
 
-      - name: Install Buildozer and Cython
+      - name: Install Buildozer and Fixed Dependencies
         run: |
-          pip install --upgrade pip setuptools
-          pip install Cython==0.29.36 buildozer python-for-android
+          python -m pip install --upgrade "pip<24.1" "setuptools<69.0.0" wheel
+          pip install Cython==0.29.36
+          pip install buildozer
+          pip install git+https://github.com/kivy/python-for-android.git@master
 
       - name: Build APK with Buildozer
         run: |
