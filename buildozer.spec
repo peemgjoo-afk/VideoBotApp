@@ -4,6 +4,7 @@ package.name = videobotstudio
 package.domain = org.baowpheem
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,json,ttf
+version = 0.1
 requirements = python3,kivy==2.3.1,requests
 orientation = portrait
 fullscreen = 0
