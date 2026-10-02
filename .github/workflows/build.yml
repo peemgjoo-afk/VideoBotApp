@@ -34,9 +34,8 @@ jobs:
           pip install buildozer
           pip install git+https://github.com/kivy/python-for-android.git@master
 
-      - name: Clean & Build APK with Buildozer
+      - name: Build APK with Buildozer
         run: |
-          buildozer android clean
           yes | buildozer android debug
 
       - name: Upload APK Artifact
