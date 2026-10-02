@@ -5,7 +5,7 @@ package.domain = org.baowpheem
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,json,ttf
 version = 0.1
-requirements = python3,kivy==2.3.1,requests
+requirements = python3,kivy==2.3.0,requests
 orientation = portrait
 fullscreen = 0
 
@@ -16,6 +16,7 @@ android.minapi = 21
 android.ndk = 25b
 android.sdk = 33
 android.accept_sdk_licenses = True
+android.archs = arm64-v8a
 
 [buildozer]
 log_level = 2
